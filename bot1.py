@@ -79,14 +79,14 @@ def status(update: Update, context: CallbackContext) -> None:
     if user_id in AUTHORIZED_USERS:
         expiry_time = AUTHORIZED_USERS[user_id]
         time_left = expiry_time - datetime.now()
-        update.message.reply_text(f"👤 **User:** {username}
-🆔 **ID:** {user_id}
-💎 **Subscription:** ✅ ACTIVE
+        update.message.reply_text(f"👤 **User:** {username}/n
+🆔 **ID:** {user_id}/n
+💎 **Subscription:** ✅ ACTIVE/n
 ⏳ **Time Left:** {time_left}
         ")", parse_mode="Markdown")
     else:
-        update.message.reply_text(f"👤 **User:** {username}
-🆔 **ID:** {user_id}
+        update.message.reply_text(f"👤 **User:** {username}/n
+🆔 **ID:** {user_id}/n
 💎 **Subscription:** ❌ INACTIVE", parse_mode="Markdown")
 
 ## 🚀 /bgmi Command (Executes Binary)
